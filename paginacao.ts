@@ -67,9 +67,9 @@ paginacao(){
     }
 
     this.isLoadingResults = true;
-    this.arquivosService.getSmartArq(this.ordenarpage , this.tipoPainel, this.tipoArquivosSelect, this.cnpjEmit)
+    this.service(this.ordenarpage , this.params)
       .subscribe(response => {
-        this.arquivos = response.data;
+        this.list = response.data;
         this.isLoadingResults = false;
       });
   }
