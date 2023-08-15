@@ -1,0 +1,9 @@
+  <ul class="paginacao" *ngIf="openPagination">
+    <button (click)="prev()" *ngIf="openPrev" class="ico-arrow ico-left"></button>
+    <li *ngFor="let item of qtdItens">
+      <button (click)="paginar(item)" class="button-{{item}}">
+        <span>{{item}}</span>
+      </button>
+    </li>
+    <button (click)="next()" *ngIf="openNext" class="ico-arrow ico-right"></button>
+  </ul>
